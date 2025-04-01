@@ -76,5 +76,6 @@ func (s *APIServer) handleHello() http.HandlerFunc {
 
 	return func(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(w, "Hello")
+		logrus.Info("received query on \"hello\" route") // logging to stdout
 	}
 }
